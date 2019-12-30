@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<!-- <entry key="A_CSVDownloadPath">D:/NiyoginCSV/</entry>-->
+
+<!-- DBConnection Properties are given below -->
+<entry key="B_mysqlDriver">com.mysql.jdbc.Driver</entry>
+<entry key="C_mysqConnection">jdbc:mysql://localhost:3306/</entry>
+<entry key="C1_mysqDBConnection">board_meeting</entry>
+<entry key="D_mysqDBConnection">jdbc:mysql://localhost:3306/board_meeting</entry>
+<entry key="E_mysqlDBUserName">root</entry>
+<entry key="F_mysqlDBPassword">Icmroot@2017</entry>
+<!-- DBConnection Properties  ends here -->
+
+
+<!-- Date format and other Properties related to Board Meeting Webapp -->
+	<entry key="E_DataBaseMeetingDate">MM/dd/yyyy HH:mm</entry>
+	<entry key="F_ForDateWithMonthName">dd-MMMM-yyyy</entry>
+	<!-- Parse STring time to Date Time-->
+	<entry key="G_ForStringToTimeParse">HH:mm</entry>
+	<!-- G_ConvertToAmPm is tonvert 24 hrs time to 12 hrs-->
+	<entry key="H_ConvertToAmPm">hh:mm aa</entry> 
+	<entry key="I_DOBStrToDate">yyyy-MM-dd</entry><!-- to change db date formate to parse into date type-->
+	<entry key="J_AuthNormalizeDate">dd-MM-yyyy</entry><!-- to Normalize the I_DOBStrToDate -->
+<!-- Date format and other Properties related to Board Meeting Webapp ends here -->
+</properties>

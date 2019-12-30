@@ -1,0 +1,74 @@
+<%@ page language="java" 
+    contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+%>
+<html>
+<head>
+<%
+   if(session.getAttribute("Authorization")==null){
+	   System.out.print("dssdssddsddsjkhdsjdhsjdssghsd");
+	   response.sendRedirect("/index.jsp");
+   }
+    String auth =(String)session.getAttribute("Authorization");
+    String memid =(String)session.getAttribute("memberid");
+    String emailuname =(String)session.getAttribute("email");
+    String designation =(String)session.getAttribute("designation");
+    String phone =(String)session.getAttribute("phone");
+    String imgpath =(String)session.getAttribute("imagepath");
+%>
+
+<head>
+    <title>Board_Login</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <link rel="stylesheet" href="../css/app.css" /> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css" />
+    <script rel="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script rel="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js'></script>
+    <script rel="text/javascript" src="../js/angular-animate.min.js"></script>
+    <script rel="text/javascript" src="../js/angular-aria.min.js"></script>
+    <script rel="text/javascript" src="../js/angular-messages.min.js"></script>
+    <script rel="text/javascript" src="../js/angular-material.min.js"></script>
+    <script rel="text/javascript" src="../controllers/index_controller.js"></script>
+<style>
+
+.header_style{
+            box-shadow: 0px -1px 4px 4px rgba(0, 0, 0, 0.158);
+            padding: 56px;
+            background-color: white;
+        }
+</style>
+</head>
+<body>
+   
+<header>
+    <md-toolbar md-scroll-shrink >
+        <div class="md-toolbar-tools header_style">
+                <img src="../image/fis-logo.png" alt="image caption"  style="width:204px">
+        </div>
+      </md-toolbar>
+</header>
+<!-- <div layout="row" >
+        <div layout="column" >
+    <md-card flex=50>
+        <md-card-title class="md-title">Notification</md-card-title>
+    </md-card>
+</div>
+<div layout="column">
+    <md-card flex>
+            <md-card-title class="md-title">Notification</md-card-title>
+        </md-card>
+        </div>
+</div> -->
+
+<div layout="row" flex>
+    <div layout="row" flex-offset="10" style="border:1px solid black;">gdfgfdhhfh
+    </div>
+    <div layout="row" flex="40" style="border:1px solid black;">fdhfdhfhh</div>
+    <div layout="row" flex="40" style="border:1px solid black;">fhfghfghfgh</div>
+    <div layout="row" flex-offset="10" style="border:1px solid black;">fghgfhgfhgfhgfjyuiyuiyu
+        </div>
+</div>
+</body>
+</html>

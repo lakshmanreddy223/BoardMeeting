@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>BoardMeeting</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>
+            com.serverinit.ConfigListener
+    </listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>BoardMeet</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>com.webservices;com.requestFilter</param-value>
+    </init-param>
+    <init-param>
+      <param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name>
+      <param-value>com.requestFilter.JaxRsFilterAuthentication</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardMeet</servlet-name>
+    <url-pattern>/boardMeet/Dashboard/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BoardMeetLoad</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>com.loadservice</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardMeetLoad</servlet-name>
+    <url-pattern>/boardMeet/load/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BoardMeetLogin</servlet-name>
+    <servlet-class>com.authentication.LoginServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardMeetLogin</servlet-name>
+    <url-pattern>/boardMeet/Login</url-pattern>
+  </servlet-mapping>
+   <servlet>  
+    <description></description>  
+   <!--<display-name>LogoutServlet</display-name>  -->
+    <servlet-name>LogoutServlet</servlet-name>  
+    <servlet-class>com.authentication.Logout</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LogoutServlet</servlet-name>  
+    <url-pattern>/boardMeet/Logout</url-pattern>  
+  </servlet-mapping>  
+  
+   <servlet>
+    <servlet-name>log-out</servlet-name>
+    <jsp-file>/Logout.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>log-out</servlet-name>
+    <url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>invalid</servlet-name>
+    <jsp-file>/Invalid.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>invalid</servlet-name>
+    <url-pattern>/invalid</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>homepage</servlet-name>
+    <jsp-file>/html/home.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>homepage</servlet-name>
+    <url-pattern>/home</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>sessionout</servlet-name>
+    <jsp-file>/Session_out.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>sessionout</servlet-name>
+    <url-pattern>/sessionout</url-pattern>
+</servlet-mapping>
+  
+</web-app>

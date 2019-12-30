@@ -1,0 +1,590 @@
+
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('fonts/LatoBlack.eot');
+    src: url('fonts/LatoBlack.eot') format('embedded-opentype'),
+         url('fonts/LatoBlack.woff2') format('woff2'),
+         url('fonts/LatoBlack.woff') format('woff'),
+         url('fonts/LatoBlack.ttf') format('truetype'),
+         url('fonts/LatoBlack.svg#LatoBlack') format('svg');
+}
+
+@font-face {
+    font-family: 'LatoLight';
+    src: url('fonts/LatoLight.eot');
+    src: url('fonts/LatoLight.eot') format('embedded-opentype'),
+         url('fonts/LatoLight.woff2') format('woff2'),
+         url('fonts/LatoLight.woff') format('woff'),
+         url('fonts/LatoLight.ttf') format('truetype'),
+         url('fonts/LatoLight.svg#LatoLight') format('svg');
+}
+
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('fonts/LatoRegular.eot');
+    src: url('fonts/LatoRegular.eot') format('embedded-opentype'),
+         url('fonts/LatoRegular.woff2') format('woff2'),
+         url('fonts/LatoRegular.woff') format('woff'),
+         url('fonts/LatoRegular.ttf') format('truetype'),
+         url('fonts/LatoRegular.svg#LatoRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('fonts/MontserratBold.eot');
+    src: url('fonts/MontserratBold.eot') format('embedded-opentype'),
+         url('fonts/MontserratBold.woff2') format('woff2'),
+         url('fonts/MontserratBold.woff') format('woff'),
+         url('fonts/MontserratBold.ttf') format('truetype'),
+         url('fonts/MontserratBold.svg#MontserratBold') format('svg');
+}
+
+@font-face {
+    font-family: 'MontserratExtraLight';
+    src: url('fonts/MontserratExtraLight.eot');
+    src: url('fonts/MontserratExtraLight.eot') format('embedded-opentype'),
+         url('fonts/MontserratExtraLight.woff2') format('woff2'),
+         url('fonts/MontserratExtraLight.woff') format('woff'),
+         url('fonts/MontserratExtraLight.ttf') format('truetype'),
+         url('fonts/MontserratExtraLight.svg#MontserratExtraLight') format('svg');
+}
+
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url('fonts/MontserratMedium.eot');
+    src: url('fonts/MontserratMedium.eot') format('embedded-opentype'),
+         url('fonts/MontserratMedium.woff2') format('woff2'),
+         url('fonts/MontserratMedium.woff') format('woff'),
+         url('fonts/MontserratMedium.ttf') format('truetype'),
+         url('fonts/MontserratMedium.svg#MontserratMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('fonts/MontserratRegular.eot');
+    src: url('fonts/MontserratRegular.eot') format('embedded-opentype'),
+         url('fonts/MontserratRegular.woff2') format('woff2'),
+         url('fonts/MontserratRegular.woff') format('woff'),
+         url('fonts/MontserratRegular.ttf') format('truetype'),
+         url('fonts/MontserratRegular.svg#MontserratRegular') format('svg');
+}
+
+html{
+    background-color: #ffffff !important;
+}
+body {
+    font-family: 'LatoRegular' !important;
+    font-size: 14px !important; 
+    background-color: #ffffff !important;
+
+}
+
+header {
+    font-family: 'LatoRegular' !important;
+    font-size: 14px !important; 
+    background-color: #ffffff !important;
+
+}
+
+input{
+    font-family: 'LatoRegular' !important;
+}
+select{
+    font-family: 'LatoRegular' !important;
+}
+h1{
+    font-family: 'LatoRegular' !important;
+}
+h2{
+    font-family: 'MontserratRegular' !important;
+}
+#clear_btn {
+    margin: 0 !important;
+    right: 24px !important;
+    left: auto !important;
+    top: 2px !important;
+}
+a{
+    text-decoration: none;
+}
+input[type="password"] {
+   
+    font:small-caption !important;
+    font-size:25px !important;
+    color:#2196F3;
+}
+p{
+    font-family: 'LatoRegular' !important;
+}
+.sub-title{
+    font-size: 24pt;
+}
+
+.profile-create-dialog-label {
+    padding-top: 30px;
+    color: #585858;
+}
+
+.user-profile-avatar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.09);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.user-div {
+    overflow-y: auto;
+    width: 228px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+.user-div:hover {
+    border: 1px solid rgba(0,0,0,0.09);
+    cursor: pointer;
+}
+
+.user-name {    
+    margin-top: 0.2cm;
+    margin-bottom: 0.2cm;
+}
+
+.user-department {
+    margin-top: 0.2cm;
+    margin-bottom: 0.2cm;
+    text-transform: uppercase;
+}
+
+.user-roles {
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 10px;
+    height: 15px;
+    padding: 0 10px;
+    border-radius: 25px;
+    font-size: 10px;
+    color: #24A0D0;
+    border: 1px solid #24A0D0;
+}
+
+.profile-apps {
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    height: 15px;
+    padding: 0 10px;
+    font-size: 10px;
+    background-color: #A9A9A9;
+}
+
+.input-label{
+    margin-top:16px;
+}
+
+
+.input-label-select{	
+	margin-top:16px;
+}
+.md-subheader{
+    background-color: #ffffff !important;
+}
+
+md-input-container .md-errors-spacer{
+	min-height:0px;
+}
+
+.md-input-container-thin{
+    line-height: 20px !important;
+	margin:12px 0 !important;
+}
+
+md-content{
+    background-color: #ffffff;
+
+}
+
+.btn {
+    margin-right: 8px;
+}
+
+.angular-ui-tree-handle {
+    background: #f8faff;
+    
+    
+    padding: 0px 0px;
+}
+
+
+.angular-ui-tree-placeholder {
+    background: #f0f9ff;
+    border: 2px dashed #bed2db;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+#tree-root  li{
+    list-style: none;     
+}
+
+#tree-root > ul{
+    padding-left:0;
+    margin-left:0;
+}
+
+#tree-root > md-button{
+    
+}
+
+#tree-root  .md-button{
+    padding-right:6px;
+    padding-left:6px !important;
+}
+
+
+/* Roles */
+
+
+
+.map{
+	border:1px solid #4CAF50 !important;
+	color : #4CAF50;
+}
+
+.map:hover{
+	background:#4CAF50 !important;
+	color:#fff !important;
+}
+
+.map:visited{
+	border:1px solid #4CAF50 !important;
+	color : #4CAF50;	
+}
+
+/* GREEN BUTTONS */
+
+/*---------------------*/
+.normal-button{
+    font-family: 'LatoBlack' !important;
+    font-weight: 900 !important;
+    color : rgb(255, 255, 255) !important;
+    background-color: #16C36F !important;
+    /* background: #16C36F  !important; */
+    border: 2px solid #16C36F  !important;
+}
+
+.normal-button:hover{
+	background:#16D36F !important;
+	background-color:#16D36F !important;
+	color:rgb(255, 255, 255) !important;
+}
+
+.normal-button:visited{
+    color : rgb(255, 255, 255)  !important;
+    background-color: #16C36F  !important;	
+    background: #16C36F  !important;	
+}
+
+/*---------------------*/
+.normal-white-button{
+    color : #16C36F  !important;
+    border: 1px solid #16C36F  !important;
+    background-color: white  !important;
+}
+
+.normal-white-button:hover{
+	background:#16C36F !important;
+	background-color:#16C36F !important;
+	color:rgb(255, 255, 255) !important;
+}
+
+.normal-white-button:visited{
+    color : #16C36F  !important;
+    border: 1px solid #16C36F  !important;
+    background-color: white  !important;
+}
+
+
+/* BLUE BUTTONS */
+
+
+/*---------------------*/
+.secondary-button {
+    font-family: 'LatoBlack' !important;
+    font-weight: 900 !important;
+    color : rgb(255, 255, 255);
+    background: #24A0D0  !important;
+    background-color: #24A0D0  !important;
+    
+}
+
+.secondary-button:hover{
+	background:#24B0D0 !important;
+	background-color:#24B0D0 !important;
+	color:rgb(255, 255, 255) !important;
+}
+
+.secondary-button:visited{
+    color : rgb(255, 255, 255)  !important;
+    background: #24A0D0  !important;
+    background-color: #24A0D0  !important;
+}
+
+/*---------------------*/
+.secondary-white-button {
+    background-color: white !important;
+    color : #16C36F  !important;
+    border: 1px solid #16C36F  !important;
+}
+
+.secondary-white-button:hover{
+	/* background:#16C36F !important; */
+    background-color: white !important;
+	/* background-color:#16C36F!important; */
+	/* color:rgb(255, 255, 255) !important; */
+}
+
+.secondary-white-button:visited{
+    color : #16C36F  !important;
+    border: 1px solid #16C36F  !important;	
+}
+
+/*---------------------*/
+.secondary-white-nobor-button {
+    color : #24A0D0  !important;
+    background: white !important;
+    background-color: white !important;
+}
+
+.secondary-white-nobor-button:hover{
+	color:#24B0D0 !important;
+    background: white !important;
+    background-color: white !important;
+}
+
+.secondary-white-nobor-button:visited{
+    color : #24A0D0  !important;
+    background: white !important;
+    background-color: white !important;
+}
+
+/* User Div Internal Layer*/
+.user-internal-layer {
+    position:absolute;
+    z-index:1;
+    top:0;
+    width:100%;
+    height:100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.09);    
+    background-color:rgba(255, 255, 255, 0.8);
+}
+/* User Div Internal Layer end*/
+
+/* user checkbox css*/
+.user-checkbox {
+    margin-top:16px;
+    margin-right:8px !important;
+    z-index:2;
+    position:absolute;
+    top:5;
+    right:0;
+}
+
+.empty-view-text {
+    margin-top: 85px;
+    font-size: 35px;
+    color:#E0E0E0;
+    font-weight: 800;
+}
+
+.nothing-to-show {
+    
+    height:400px !important;
+    background-image: url(idm_background_L.svg); 
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+.small-button {
+    display: inline-block !important;
+    min-width:40%; 
+    color : #24A0D0  !important;
+    border: 1px solid #24A0D0  !important;
+}
+
+.small-button:hover {
+	/*background:#24A0D0 !important;
+	color:rgb(255, 255, 255) !important;*/
+	background-color:white !important;
+}
+
+.small-button:visited {
+    color : #24A0D0  !important;
+    border: 1px solid #24A0D0  !important;	
+}
+/* Small Buttons END */
+
+/*INPUT TEXT FIELD*/
+
+
+
+
+
+
+
+
+.addApp{
+	border:1px solid rgb(57, 113, 233) !important;
+	color : rgb(57, 113, 233);
+}
+
+.addApp:hover{
+	background:rgb(57, 113, 233) !important;
+	color:#fff !important;
+}
+
+.addApp:visited{
+	border:1px solid rgb(57, 113, 233) !important;
+	color : rgb(57, 113, 233);	
+}
+
+
+.gray-toolbar{
+	background-color : #EEEEEE !important;
+	color : #424242 !important;
+}
+
+.application-remove-button {
+    min-width: auto;
+}
+
+.app-select {
+    width: 200px !important;
+    margin: 5px 20px 5px 20px !important;
+}
+
+md-checkbox {
+    margin: 20px 20px 20px 20px;
+}
+
+
+
+.users{
+	position:absolute;
+	height:550px;
+	width:300px;
+	right:0;
+	max-height:550px !important;
+	background-color : #EEEEEE !important;
+}
+
+.searchbar input{
+	border-radius:2px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border:1px solid #fff;
+	outline: none;
+}
+
+.searchbar .support{
+	background:#fff;
+	border:2px solid #fff;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	
+
+}
+
+.label {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+
+/* 
+*
+*
+*  NIYOGIN UI KIT 
+*
+*
+*/
+
+.input-field-title-and-buttons {
+    font-family: 'LatoBlack';
+    font-size: 12pt;
+    text-transform: uppercase;
+}
+
+.subtext-disclaimer {
+    font-family: 'LatoLight';
+    font-size: 12pt;
+}
+
+.input-text {
+    font-family: 'LatoLight';
+    font-size: 24pt;
+}
+
+.title1 {
+    font-family: 'MontserratBold';
+    font-size: 54pt;
+}
+
+.title2 {
+    font-family: 'MontserratExtraLight';
+    font-size: 48pt;
+}
+
+.title3 {
+    font-family: 'MontserratBold';
+    font-size: 36pt;
+}
+
+.subtitle {
+    font-family: 'MontserratMedium';
+    font-size: 24pt;
+}
+
+.banner-body-text {
+    font-family: 'LatoRegular';
+    font-size: 16pt;
+}
+
+.body-text {
+    font-family: 'LatoLight';
+    font-size: 14pt;
+}
+
+.navigation-text {
+    font-family: 'MontserratRegular';
+    font-size: 12pt;
+}
+
+.primary-dark-blue {
+    background-color: #0069B5;
+}
+
+.primary-light-blue {
+    background-color: #24A0D0;
+}
+
+.secondary-green {
+    background-color: #16C36F;
+}
+
+.grey1 {
+    background-color: #585858;
+}
+
+.dialog-header {
+    background-color: #DCDCDC;
+}

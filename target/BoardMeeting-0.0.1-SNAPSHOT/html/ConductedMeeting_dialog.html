@@ -1,0 +1,88 @@
+
+</style>
+<md-dialog id="login-dialog" aria-label="ConductedMeeting" ng-cloak>
+<md-card style="margin: 0px;">
+    <md-toolbar layout="row" style="background:linear-gradient(to right, #0e7ecee3 , #0e3965d1);" class="md-toolbar-tools " >
+        <div class="md-toolbar-tools" layout-align="space-around center" style="width:100%">     
+          <h2 style="color:rgb(250,250,250)">Conducted Meetings</h2>
+        </div>
+        <md-button class="md-icon-button" style="margin-right: 4px;color:white;position:absolute;right:22px;" ng-click="cancel()">
+              <md-icon style="color:white;font-size: 32px" md-font-library="Material-icon" aria-label="Close dialog">clear</md-icon>
+            </md-button>
+      </md-toolbar>
+      <md-d ialog-content style="min-height:280;max-height:340px;overflow-y:scroll;">
+          <md-card style="margin:0px" ng-repeat="condlist in conducted_dialog">
+              <div layout="row" style="height:112px ">
+                    <md-card style="margin: 0px;" flex="50">
+                            <div layout="row" style="height:112px ">
+                              <div layout="column " flex>
+                                <div layout="row" layout-padding style="min-height:70px;max-height:102px;overflow-y:auto" >
+                                      <md-card-content layout-padding flex style="display: contents;">
+                                              <span class="md-subhead description" >{{condlist.title}}</span>
+                                  </md-card-content>
+                                </div>
+                                <div layout="row" layout-padding style="padding-top: 1px;padding-left:0px;padding-right:0px;">
+                                  <div layout="row" layout-padding flex=30>
+                                    <div layout="column" style="padding-right:0px;">
+                                      <md-icon md-svg-src="../image/calendar.svg" class="icon_style" aria-label="android "></md-icon>
+                                      </div>
+                                  <div layout="column">          
+                                    <span flex>
+                                          <span class="md-primary">{{condlist.day}}</span>
+                                    </span>
+                                     </div>
+                                    </div>
+                                
+                                    <div layout="row" layout-padding style="padding-left: 4px" flex=40>                                         
+                                        <div layout="column" >          
+                                          <span flex>
+                                                <span class="md-primary">{{condlist.date}}</span>
+                                          </span>
+                                           </div>
+                                      </div>    
+
+                                      <div layout="row" layout-padding  style="padding-right:0px;" flex=30>
+                                              <div layout="column" style="padding-left:0px;padding-right:0px;">
+                                                <md-icon md-svg-src="../image/time.svg" class="icon_style" aria-label="android "></md-icon>
+                                                </div>
+                                            <div layout="column">          
+                                              <span flex >
+                                                    <span class="md-primary" style="display:inline-block;">{{condlist.time}}</span>
+                                              </span>
+                                               </div>
+                                              </div>                             
+                                </div>
+                              </div>
+                              <!-- <md-divider></md-divider> -->          
+                            </div>
+                           </md-card>
+                <!-- <md-divider></md-divider> -->
+                <md-divider class="vertical-divider"></md-divider>
+                <md-card flex=10 style="margin:0px" layout-align="space-around center">
+                <div layout="column " >   
+                  <a target="_blank" href="{{condlist.agendalink}}">
+                    <span style="color:#16c36f; font-size: 16px;">Agenda</span>  
+                    </a>           
+                </div>
+                </md-card>
+                <md-divider class="vertical-divider "></md-divider>
+                <md-card flex=15 style="margin:0px" layout-align="space-around center ">
+                    <div layout="column" > 
+                        <a href="{{condlist.minutes_of_meet}}" target="_blank">
+                            <span ng-if="condlist.minutes_of_meet !='NA'" style="color:#16c36f;font-size: 15px;" >Minutes Of Meetings</span>
+                            </a>
+                            <span ng-if="condlist.minutes_of_meet =='NA'" style="padding:12px;color:#16c36f;font-size: 15px;">Minutes of Meeting yet to be uploaded</span>
+                          </div>
+               </md-card>
+                <md-divider class="vertical-divider "></md-divider>
+                <md-card flex=25 style="margin:0px" layout-padding >
+                <div layout="column" style="padding:2px" >  
+                  <span style="font-size: 15px;" >{{condlist.venue}}</span>
+                </div>
+               </md-card>
+          </div>
+          <md-divider class="horizontal-divider" style="border-color:black"></md-divider>
+       </md-card>
+       </md-dialog-content>
+      </md-card>
+    </md-dialog>

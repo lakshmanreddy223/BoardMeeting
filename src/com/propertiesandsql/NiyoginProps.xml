@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="A_CSVDownloadPath">D:/NiyoginCSV/</entry>
+<entry key="B_mysqlDriver">com.mysql.jdbc.Driver</entry>
+<entry key="C_mysqConnection">jdbc:mysql://localhost:3306/</entry>
+<entry key="D_mysqlDBName">niyogin</entry>
+<entry key="E_mysqlDBUserName">root</entry>
+<entry key="F_mysqlDBPassword">root@123</entry>
+</properties>

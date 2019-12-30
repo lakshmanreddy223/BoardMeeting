@@ -1,0 +1,82 @@
+<style>
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltiptext {
+    visibility: visible;
+    width: 120px;
+    color:white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: right;
+    z-index: 1;
+    font-size: 14px;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+</style>
+<script>
+    $(document).on("click", function(event){
+          var $trigger = $("#hint");
+          if($trigger !== event.target && !$trigger.has(event.target).length){
+            $("#subhint").css("display","none");
+          }            
+      });
+  
+  $("#hint").click(function(){
+      $("#subhint").css("display", "inline");
+  });
+  </script>
+
+<md-dialog id="login-dialog" aria-label="Login" style="width:50%" ng-cloak>
+  <form name="loginForm" action="boardMeet/Login" method="post">
+    <md-toolbar>
+      <div class="md-toolbar-tools" style='background-color: white'>
+        <span flex></span>
+        <md-button class="md-icon-button" style="margin-right: 4px;color:white;" ng-click="cancel()">
+          <!-- <md-icon md-svg-src="../image/Close.svg" aria-label="Close dialog"></md-icon>-->
+          <md-icon style="color:#473b3b;font-size: 32px" md-font-library="Material-icon" aria-label="Close dialog">clear</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content  >
+      <div layout="row" style="margin:auto;margin-right:32px;margin-left: 64px">
+        <md-card style="width:184px;height:188px;margin-right: 32px">   
+          <img class="md-user-avatar" src="{{dialog.imgpath}}" alt="image caption" style="width:210px;max-height:219px;" >
+        </md-card>
+        <div flex layout="column" class="md-dialog-content" style="padding:12px;">
+            <md-input-container class="md-block">
+              <label>Username</label>
+              <input name="boarduname" ng-model="dialog.boarduname" md-autofocus required />
+            </md-input-container>
+            <md-input-container class="md-block" style="margin-bottom: 2px">
+              <label>Password</label>
+              <input minlength="08" md-maxlength="08"  ng-pattern="/^[0-9]*$/" type="password" name="boardpass" ng-model="dialog.boardpass" required />
+              <span ng-show="loginForm.boardpass.$error.pattern">Password as DOB 18-05-1948 in format: 18051948 </span>           
+            </md-input-container>
+            <md-dialog-actions layout-align="start center" layout="row" style="padding-left:0px">
+				<div  layout="row" layout-align="start center">
+					<md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary" style="margin-left:0px">
+                 Login
+                </md-button>
+				</div>
+                <div id="hint" layout="row" layout-margin style="margin-left:20px"layout-align="start center">
+                    <md-button  class=" md-primary" >
+                    Hint
+                   </md-button>
+        </div>
+        <div id="subhint" style="display:none;background-color: #16c36f;border-radius: 3px;">
+            <span class="tooltiptext"  >DOB 18-05-1948 as 18051948</span>
+        </div>         
+      </md-dialog-actions>            
+    </div>       
+  </div> 
+</md-dialog-content>
+</form>
+<md-dialog-footer><div style="height:5%"><div></md-dialog-footer>
+</md-dialog>

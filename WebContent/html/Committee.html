@@ -1,0 +1,20 @@
+<md-dialog id="commitee-dialog" aria-label="Committees" style="min-width: 40%;" ng-cloak>
+        <md-card style="margin: 0px;">
+                <md-toolbar layout="row" style="background:linear-gradient(to right, #0e7ecee3 , #0e3965d1);" class="md-toolbar-tools " >
+                    <div class="md-toolbar-tools" layout-align="space-around center">     
+                      <h2 style="color:rgb(250,250,250)">Committees</h2>
+                    </div>
+                    <md-button class="md-icon-button" style="margin-right: 4px;color:white;" ng-click="cancel()">
+                          <md-icon style="color:white;font-size: 32px" md-font-library="Material-icon" aria-label="Close dialog">clear</md-icon>
+                        </md-button>
+                  </md-toolbar>
+                 <md-dialog-content style="min-height:48px;max-height:272px;overflow-y:scroll;">
+                     <div ng-repeat="comit in dialog_Committees">
+                        <md-card style="margin:0px;"   layout-padding >                                
+                                <div layout="row" layout-align="space-around center" >{{comit}}</div> 
+                            </md-card> 
+                            <md-divider class="horizontal-divider" style="border-color:black"></md-divider> 
+                            </div>         
+                        </md-dialog-content>
+              </md-card>
+</md-dialog>
