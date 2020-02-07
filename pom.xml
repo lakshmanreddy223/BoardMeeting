@@ -81,6 +81,7 @@
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.0.0</version>
+				<url>http://13.127.254.72:8081/repository/sample_maven/<url>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
 				</configuration>
